@@ -4,7 +4,8 @@ TokenAuction is an on chain auction on ethereum for tokens. This is similar to h
 
 Some upcoming work:
 
-- [ ] UI
+- [X] UI https://auction.codetract.io
+- [ ] better UI
 - [ ] deploy to live net
 - [ ] determine price base on on chain orders
 - [ ] decentralize!
