@@ -19,14 +19,14 @@ The computation to determine which orders are filled is done off chain and uploa
 
 ## For developers
 
-#### Morden testnet
+#### Ropsten testnet
 
-tokenA address: `0x3824577B70e57317A2951ca7b03C2C2F752Ad0aA`  
-tokenB address: `0x31Cb32b3396AE3E32FF4F0B41CcbE4a43CC6Fb3E`  
-token faucet: `0x6F2FFF8160cf87152C243d388232963CCC1f5E05`  
-auction address: `0x2DFa6a13dB3d2Fa3e696c01a47D771C555D6b8ef`
+tokenA address: `0x8e97fbf72063b98fb4414be82107bbd3c35d4a55`  
+tokenB address: `0x3ab9273fa791972d90809e26301d4eb0deea2ec6`  
+token faucet: `0x85e15cd7c069c4367f6158a9480ffac6232c1df7`  
+auction address: `0x1430064b130e4c5ba9cd032ce36818fc209313f9`
 
-Send a 0 value transaction to the token faucet to receive free tokens A and B for use in the auction.
+Send a 0 value transaction to the token faucet to receive free tokens A and B for use in the auction. Then `approve` the auction so that it can receive your tokenA and tokenB.
 
 #### Functions
 
