@@ -4,7 +4,7 @@ TokenAuction is an on chain auction on ethereum for tokens. This is similar to h
 
 Some upcoming work:
 
-- [X] UI https://auction.codetract.io
+- [X] UI
 - [ ] better UI
 - [ ] deploy to live net
 - [ ] determine price base on on chain orders
@@ -22,10 +22,10 @@ The computation to determine which orders are filled is done off chain and uploa
 
 #### Ropsten testnet
 
-tokenA address: `0x8e97fbf72063b98fb4414be82107bbd3c35d4a55`  
-tokenB address: `0x3ab9273fa791972d90809e26301d4eb0deea2ec6`  
-token faucet: `0x85e15cd7c069c4367f6158a9480ffac6232c1df7`  
-auction address: `0x1430064b130e4c5ba9cd032ce36818fc209313f9`
+tokenA address: `0x...`  
+tokenB address: `0x...`  
+token faucet: `0x...`  
+auction address: `0x...`
 
 Send a 0 value transaction to the token faucet to receive free tokens A and B for use in the auction. Then `approve` the auction so that it can receive your tokenA and tokenB.
 
