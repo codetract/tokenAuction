@@ -4,7 +4,7 @@ TokenAuction is an on chain auction on ethereum for tokens. This is similar to h
 
 ## Overview
 
-For this beta, the trading pair is ETH Token (tokenA) and GCT (tokenB). As only tokens are allowed, ether will need to be exchanged into ether tokens first. The auction also needs to be approved before receiving tokens. These will be prompted by the website. The price is quoted similar to that at poloniex.com where A/B=price and a price of 0.4 means you can buy 1 tokenB with 0.4 tokenA.   
+For this beta, the trading pair is [ETH Token](https://eth.codetract.io) (tokenA) and [GCT](https://gold.codetract.io) (tokenB). As only tokens are allowed, ether will need to be exchanged into ether tokens first. The auction also needs to be approved before receiving tokens. These will be prompted by the website. The price is quoted similar to that at poloniex.com where A/B=price and a price of 0.4 means you can buy 1 tokenB with 0.4 tokenA.   
 
 The auction ends at 11:00 UTC everyday then the price will be uploaded. The computation to determine which orders are filled is done off chain and uploaded together with the price to the smart contract. The transaction to settle each order will then be sent out and the settled tokens will be automatically sent to the users. The next session should start after about 30 minutes and users can again create/cancel buy and sell orders till 11:00 UTC.
 
