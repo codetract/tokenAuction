@@ -1,33 +1,20 @@
 # tokenAuction
 
-TokenAuction is an on chain auction on ethereum for tokens. This is similar to how stock exchanges determine the opening and closing prices of stocks where huge volumes can all transact at a single price. This is the first iteration of many of this smart contract. In this iteration we are focusing to ensure the settling mechanics work as expected to dispense the correct amount of tokens.
-
-Some upcoming work:
-
-- [X] UI
-- [ ] better UI
-- [ ] deploy to live net
-- [ ] determine price base on on chain orders
-- [ ] decentralize!
+TokenAuction is an on chain auction on ethereum for tokens. This is similar to how stock exchanges determine the opening and closing prices of stocks where huge volumes can all transact at a single price. The beta can be accessed at https://gcteth.codetract.io . Read our [whitepaper](https://launch.codetract.io) for more information.
 
 ## Overview
 
-The trading pair is ether (A) and augur reputation token (B). As only tokens are allowed, ether will need to be exchanged into ether tokens first. The price is quoted similar to that at poloniex.com where A/B=price and a price of 0.4 means you can buy 1 B with 0.4 A.   
+For this beta, the trading pair is ETH Token (tokenA) and GCT (tokenB). As only tokens are allowed, ether will need to be exchanged into ether tokens first. The auction also needs to be approved before receiving tokens. These will be prompted by the website. The price is quoted similar to that at poloniex.com where A/B=price and a price of 0.4 means you can buy 1 tokenB with 0.4 tokenA.   
 
-The auction ends at 12:00 UTC everyday. Then the four hour (08:00 - 12:00) weighted average price from poloniex.com is taken as the settlement price. e.g. [api call](https://poloniex.com/public?command=returnChartData&currencyPair=ETH_REP&start=1479196800&end=1479196800&period=14400)
-
-The computation to determine which orders are filled is done off chain and uploaded to the smart contract. Users can then settle their orders and receive their tokens. The next trading session will also start and users can create/cancel buy and sell orders till 12:00 UTC.
+The auction ends at 11:00 UTC everyday then the price will be uploaded. The computation to determine which orders are filled is done off chain and uploaded together with the price to the smart contract. The transaction to settle each order will then be sent out and the settled tokens will be automatically sent to the users. The next session should start after about 30 minutes and users can again create/cancel buy and sell orders till 11:00 UTC.
 
 ## For developers
 
-#### Ropsten testnet
+#### Ethereum mainnet
 
-tokenA address: `0x...`  
-tokenB address: `0x...`  
-token faucet: `0x...`  
-auction address: `0x...`
-
-Send a 0 value transaction to the token faucet to receive free tokens A and B for use in the auction. Then `approve` the auction so that it can receive your tokenA and tokenB.
+ETH Token (tokenA) address: `0x6e01ee36b522a824609b7F7DfB5e4AA8Fbb48934`  
+GCT (tokenB) address: `0x560c5528ff9886d83ae117845b180e6dcf6b5175`  
+auction address: `0x48F230D47914cBE8F223344b7763f064336e8FA5`
 
 #### Functions
 
